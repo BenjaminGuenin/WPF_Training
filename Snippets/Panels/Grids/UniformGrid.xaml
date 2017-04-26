@@ -1,0 +1,11 @@
+﻿<Window x:Class="Panels.Grids.UniformGrid"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="UniformGrid" Height="300" Width="300">
+    <UniformGrid Margin="15,15,15,15" Name="uniformGrid1">
+        <TextBlock Name="tb1" Background="Aqua"/>
+        <TextBlock Name="tb2" Background="AliceBlue" />
+        <TextBlock Name="tb3" Background="AliceBlue" />
+        <TextBlock Name="tb4" Background="Aqua" />
+    </UniformGrid>
+</Window>

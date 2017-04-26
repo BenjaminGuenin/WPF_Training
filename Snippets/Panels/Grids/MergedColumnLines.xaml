@@ -1,0 +1,32 @@
+﻿<Window x:Class="Panels.Grids.Grid_MergedColumnLines"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Grid_MergedColumnLines" Height="300" Width="300">
+    <Grid Background="#DCDCDC" ShowGridLines="True">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <TextBlock Margin="2" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" TextWrapping="Wrap">
+            TextBlock positionné dans la 1ère ligne, dont les 3 celulles sont fusionnées.
+        </TextBlock>
+        <TextBlock Grid.Column="0" Grid.Row="1" Margin="5">Rectangle centré sur 2 col fusionnées:</TextBlock>
+        <Rectangle Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" 
+                   HorizontalAlignment="Center" Fill="Red" Width="180" Height="30"/>
+        <Button Grid.Column="0" Grid.Row="2" Content="Bouton" />
+        <Border Background="Green" BorderThickness="5" Grid.Row="2" Grid.Column="1" Grid.RowSpan="2" >
+            <TextBlock TextWrapping="Wrap"  >
+                TextBlock positionné dans la 2ème ligne, 2ème colonne, fusionnées avec celulle de dessous.
+            </TextBlock>
+        </Border>
+        <TextBlock Margin="5" Grid.Row="3" Grid.Column="0">4ème ligne, 1ère colonne</TextBlock>
+        <TextBlock Margin="5" Grid.Row="3" Grid.Column="2">4ème ligne, 3ème colonne</TextBlock>
+    </Grid>
+</Window>

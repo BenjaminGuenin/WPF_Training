@@ -1,0 +1,11 @@
+﻿<Window x:Class="Panels.Canvas"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Canvas" Height="300" Width="300">
+    <!-- Carré rouge positionné dans un Canvas avec les coordonnées x et y Canvas.Top et Canvas.Left -->
+
+    <Canvas Width="400" Height="300" Background="White">
+        <Rectangle Canvas.Left="30" Canvas.Top="30" 
+                   Fill="red" Width="200" Height="200" />
+    </Canvas>
+</Window>

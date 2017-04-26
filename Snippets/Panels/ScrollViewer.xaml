@@ -1,0 +1,15 @@
+﻿<Window x:Class="Panels.ScrollViewer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ScrollViewer" Height="300" Width="300">
+    <StackPanel Orientation="Horizontal">
+        <!-- Un TextBlock simple -->
+        <TextBlock  Width="300" TextWrapping="Wrap" Text="Microsoft Silverlight est une implémentation multiplateforme du .NET Framework destinée à créer et proposer la prochaine génération d'expériences multimédias et d'applications interactives riches pour le Web, quel que soit le navigateur utilisé. Silverlight unifie les capacités du serveur, du Web et de l'ordinateur de bureau, du code managé et des langages dynamiques, de la programmation déclarative et traditionnelle et la puissance de Windows Presentation Foundation (WPF)." />
+
+        <!-- La même TextBlock dans un ScrollViewer. -->
+        <ScrollViewer  VerticalScrollBarVisibility="Auto"  >
+            <TextBlock Width="300" TextWrapping="Wrap" Text="Microsoft Silverlight est une implémentation multiplateforme du .NET Framework destinée à créer et proposer la prochaine génération d'expériences multimédias et d'applications interactives riches pour le Web, quel que soit le navigateur utilisé. Silverlight unifie les capacités du serveur, du Web et de l'ordinateur de bureau, du code managé et des langages dynamiques, de la programmation déclarative et traditionnelle et la puissance de Windows Presentation Foundation (WPF)." />
+        </ScrollViewer>
+
+    </StackPanel>
+</Window>

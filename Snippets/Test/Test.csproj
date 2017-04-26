@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D2C9711F-C8BB-4425-8D64-BE2A97A9FB47}</ProjectGuid>
+    <ProjectGuid>{E82F44E7-A0A9-468F-B555-4BD7E9F66002}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Panels</RootNamespace>
-    <AssemblyName>Panels</AssemblyName>
+    <RootNamespace>Test</RootNamespace>
+    <AssemblyName>Test</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -53,75 +53,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Border.xaml.cs">
-      <DependentUpon>Border.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Canvas.xaml.cs">
-      <DependentUpon>Canvas.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="DockPanel.xaml.cs">
-      <DependentUpon>DockPanel.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Grids\Grid.xaml.cs">
-      <DependentUpon>Grid.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Grids\AlignMargin.xaml.cs">
-      <DependentUpon>AlignMargin.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Grids\GridSplitter.xaml.cs">
-      <DependentUpon>GridSplitter.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Grids\MergedColumnLines.xaml.cs">
-      <DependentUpon>MergedColumnLines.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Grids\UniformGrid.xaml.cs">
-      <DependentUpon>UniformGrid.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ViewBox.xaml.cs">
-      <DependentUpon>ViewBox.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ScrollViewer.xaml.cs">
-      <DependentUpon>ScrollViewer.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="StackPanel.xaml.cs">
-      <DependentUpon>StackPanel.xaml</DependentUpon>
-    </Compile>
-    <Page Include="Border.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Canvas.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="DockPanel.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Grids\Grid.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Grids\AlignMargin.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Grids\GridSplitter.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Grids\MergedColumnLines.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Grids\UniformGrid.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ViewBox.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -134,14 +65,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="ScrollViewer.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="StackPanel.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
