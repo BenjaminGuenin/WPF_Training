@@ -1,0 +1,45 @@
+﻿<Window x:Class="Snippets.ComboBox"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ComboBox" Height="300" Width="300">
+    <StackPanel>
+        <ComboBox Width="600" Height="30" IsEditable="True">
+            
+            <!--
+                Combinaison de IsEditable=true fonctionne avec TextSearch.Text="MotCle"
+                Permet de chercher dans la liste des items
+            -->
+            
+            <!-- Item #1 -->
+            <StackPanel Orientation="Horizontal" Margin="5" TextSearch.Text="Mer">
+                <Image Source="Images/voyages_mer.jpg"/>
+                <StackPanel Width="200">
+                    <TextBlock Margin="10,0" FontWeight="Bold" Text="Mer" />
+                    <TextBlock Margin="10,0" FontSize="14" VerticalAlignment="center" TextWrapping="Wrap">
+                        Séjour en bord de mer, avec plages de sables fin et ses paillottes exotiques ...
+                    </TextBlock>
+                </StackPanel>
+            </StackPanel>
+            <!-- Item #2 -->
+            <StackPanel Orientation="Horizontal" Margin="5"  TextSearch.Text="Montagne">
+                <Image Source="Images/voyages_ski.jpg"/>
+                <StackPanel Width="200">
+                    <TextBlock Margin="10,0" FontWeight="Bold" Text="Montagne"/>
+                    <TextBlock Margin="10,0" FontSize="14" VerticalAlignment="center" TextWrapping="Wrap">
+                        Séjours à la montagne toute l'année, avec son vaste domaine skiable l'hiver et ses randonnées pédestres et VTT l'été !
+                    </TextBlock>
+                </StackPanel>
+            </StackPanel>
+            <!-- Item #3 -->
+            <StackPanel Orientation="Horizontal" Margin="5" TextSearch.Text="Sud">
+                <Image Source="Images/voyages_sud.jpg"/>
+                <StackPanel Width="200">
+                    <TextBlock Margin="10,0" FontWeight="Bold" Text="Sud"/>
+                    <TextBlock Margin="10,0" FontSize="14" VerticalAlignment="center" TextWrapping="Wrap">
+                        Séjours sous les tropiques pour avoir du soleil toute l'année !
+                    </TextBlock>
+                </StackPanel>
+            </StackPanel>
+        </ComboBox>
+    </StackPanel>
+</Window>
