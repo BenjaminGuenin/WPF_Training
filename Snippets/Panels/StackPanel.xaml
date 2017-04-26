@@ -1,0 +1,11 @@
+﻿<Window x:Class="Panels.StackPanel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="StackPanel" Height="300" Width="300">
+    <StackPanel>
+        <TextBlock HorizontalAlignment="Left" Background="Aqua"  Text="Gauche" />
+        <TextBlock HorizontalAlignment="Center" Background="GreenYellow"  Text="Centre" />
+        <TextBlock HorizontalAlignment="Right" Background="Yellow" Text="Droite" />
+        <TextBlock HorizontalAlignment="Stretch" Background="Orange" Text="Stretch" />
+    </StackPanel>
+</Window>

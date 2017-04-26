@@ -1,0 +1,450 @@
+﻿<Window x:Class="Snippets.CommonControls"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:system="clr-namespace:System;assembly=mscorlib"
+        Title="CommonControls" Height="300" Width="300">
+    <StackPanel>
+        <!--============================================================================================================
+        Controles WPF
+        ============================================================================================================
+
+        ***********************************************************************************************************************
+        * Controle TextBlock
+        ***********************************************************************************************************************-->
+
+        <!-- Texte formaté -->
+
+        <TextBlock
+            Text="Texte formaté"
+            FontFamily="Verdana"
+            FontSize="36"
+            FontStretch="UltraExpanded"
+            FontStyle="Italic"
+            FontWeight="ExtraBlack"  />
+
+        <!-- Texte formaté avec des éléments runs et sauts de ligne -->
+
+        <TextBlock FontSize="16">
+            Exemples de texte formaté avec des éléments runs :           
+            <LineBreak/>
+            <Run Foreground="Maroon" FontFamily="Courier New" FontSize="24">Courier New 24</Run>
+            <LineBreak/>
+            <Run Foreground="Teal" FontFamily="Times New Roman" FontSize="18" FontStyle="Italic">Times New Roman Italic 18</Run>
+            <LineBreak/>
+            <Run Foreground="SteelBlue" FontFamily="Verdana" FontSize="14" FontWeight="Bold">Verdana Bold 14</Run>
+        </TextBlock>
+
+        <!--***********************************************************************************************************************
+        * Famille RangeBase
+        ***********************************************************************************************************************-->
+
+        <!-- Contrôle ProgressBar avec la Pté IsIndeterminate -->
+
+        <StackPanel Margin="10"  Width="350" Orientation="Horizontal">
+            <ProgressBar IsIndeterminate="True"  Margin="5" Width="300" Height="20" />
+        </StackPanel>
+
+        <!-- Contrôle Slider -->
+
+        <StackPanel Margin="10">
+            <Slider Name="MyControleSlider" Minimum="10" Maximum="20"></Slider>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Margin="5">Valeur :</TextBlock>
+                <TextBlock Name="labelMessage" Margin="5" />
+            </StackPanel>
+        </StackPanel>
+
+        <!-- Afficher les graduations et limiter les valeurs -->
+
+        <Slider Name="ControleSlider" Minimum="10" Maximum="20" TickPlacement="BottomRight" IsSnapToTickEnabled="True" />
+
+        <!--***********************************************************************************************************************
+        * Famille ContentControl
+        ***********************************************************************************************************************-->
+
+        <!-- Redéfinir le contenu d'un ContentControl  -->
+
+        <StackPanel>
+            <!-- Mt ToString() -->
+            <Button Margin="3">Bouton texte</Button>
+
+            <!-- Mt UIElement.OnRender() -->
+            <Button Margin="3">
+                <StackPanel>
+                    <TextBlock Margin="3">Bouton personnalisé (texte + image)</TextBlock>
+                    <Image Source="smile.jpg"
+                           Stretch="None" />
+                </StackPanel>
+            </Button>
+        </StackPanel>
+
+        <!-- Controle Label -->
+
+        <StackPanel Margin="5">
+            <Label Target="{Binding ElementName=txtNom}">_Nom</Label>
+            <TextBox Name="txtNom"></TextBox>
+            <Label Target="{Binding ElementName=txtPrenom}">_Prenom</Label>
+            <TextBox Name="txtPrenom"></TextBox>
+        </StackPanel>
+
+        <!-- Controle ToolTip -->
+
+        <StackPanel Margin="5">
+            <CheckBox>
+                Exemple de ToolTip au look Office
+                <CheckBox.ToolTip>
+                    <StackPanel>
+                        <Label FontWeight="Bold" Background="Blue" Foreground="White">
+                            Personnalisation d'un ToolTip
+                        </Label>
+                        <TextBlock Padding="10" TextWrapping="Wrap" Width="250">
+                            L'apparence des contrôles dérivés de ContentControl peut être entièrement redéfinie !
+                        </TextBlock>
+                        <Separator/>
+                        <StackPanel Orientation="Horizontal" Margin="5">
+                            <Image Source="aide.png" />
+                            <TextBlock FontWeight="Bold" Margin="5">Appuyez sur F1 pour une aide plus détaillée.</TextBlock>
+                        </StackPanel>
+                    </StackPanel>
+                </CheckBox.ToolTip>
+            </CheckBox>
+        </StackPanel>
+
+
+        <!-- Classe ToolTipService -->
+
+        <StackPanel Margin="5">
+            <CheckBox ToolTipService.ToolTip="Le texte est affiché 4 secondes" ToolTipService.ShowDuration="4000" >
+                Exemple de ToolTipService
+            </CheckBox>
+        </StackPanel>
+
+        <!-- Controle CheckBox -->
+
+        <CheckBox  FontSize="20"
+                   IsChecked="{x:Null}"
+                   IsThreeState="True">CAC à 3 états</CheckBox>
+
+        <!-- Controle RadioButton -->
+
+        <StackPanel Margin="10">
+
+            <StackPanel>
+                <RadioButton Margin="10"
+                             Content="Option 1 StackPanel1" />
+                <RadioButton Margin="10"
+                             Content="Option 2 StackPanel1" />
+                <RadioButton Margin="10"
+                             GroupName="Groupe"
+                             Content="Option 1 Groupe" />
+            </StackPanel>
+
+            <StackPanel>
+                <RadioButton Margin="10"
+                             Content="Option 1 StackPanel2" />
+                <RadioButton Margin="10"
+                             Content="Option 2 StackPanel2" />
+                <RadioButton Margin="10"
+                             GroupName="Groupe"
+                             Content="Option 2 Groupe" />
+            </StackPanel>
+
+        </StackPanel>
+
+        <!-- Controle GroupBox -->
+
+        <StackPanel>
+            <GroupBox Header="Groupe d'options"
+                      Padding="5"
+                      Margin="5"
+                      VerticalAlignment="Top" >
+                <StackPanel>
+                    <RadioButton Margin="3" Name="RB1">Option 1</RadioButton>
+                    <RadioButton Margin="3" Name="RB2">Option 2</RadioButton>
+                    <RadioButton Margin="3" Name="RB3">Option 3</RadioButton>
+                </StackPanel>
+            </GroupBox>
+        </StackPanel>
+
+        <!-- L'Expander -->
+
+        <StackPanel>
+            <Expander Margin="5"
+                      Padding="5"
+                      Header="Region 1"
+                      IsExpanded="True"
+                      BorderThickness="1"
+                      BorderBrush="Black">
+                <Button Padding="3">Bouton en région 1</Button>
+            </Expander>
+            <Expander Margin="5"
+                      Padding="5"
+                      Header="Region 2"
+                      BorderThickness="1"
+                      BorderBrush="Black">
+                <TextBlock TextWrapping="Wrap"
+                           Text="Microsoft Silverlight est une implémentation multiplateforme du .NET Framework destinée à créer et proposer la prochaine génération d'expériences multimédias et d'applications interactives riches pour le Web, quel que soit le navigateur utilisé. Silverlight unifie les capacités du serveur, du Web et de l'ordinateur de bureau, du code managé et des langages dynamiques, de la programmation déclarative et traditionnelle et la puissance de Windows Presentation Foundation (WPF)." />
+            </Expander>
+        </StackPanel>
+
+        <!--***********************************************************************************************************************
+        * Famille ItemsControl
+        ***********************************************************************************************************************-->
+
+        <!-- Controle ListBox avec des éléments quelconques -->
+
+        <ListBox xmlns:sys="clr-namespace:System;assembly=mscorlib" Width="200">
+            <Button>Un bouton</Button>
+            <TextBlock Text="Liste de dates :" />
+            <sys:DateTime>1/1/2010</sys:DateTime>
+            <sys:DateTime>1/2/2010</sys:DateTime>
+            <sys:DateTime>1/3/2010</sys:DateTime>
+        </ListBox>
+
+
+        <!--***********************************************************************************************************************
+        * Famille Selectors
+        ***********************************************************************************************************************-->
+
+        <!-- Controle ListBox - Valeurs simples -->
+
+        <StackPanel>
+            <ListBox Margin="5" Name="MyList">
+                <ListBoxItem>Valeur 1</ListBoxItem>
+                <ListBoxItem>Valeur 2</ListBoxItem>
+                <ListBoxItem>Valeur 3</ListBoxItem>
+            </ListBox>
+            <TextBlock Name="MyLabelMessage"></TextBlock>
+            <Button Name="MyBtnSelection">Sélection multiple</Button>
+        </StackPanel>
+
+        <!-- Avec des Items de type CheckBox -->
+
+        <StackPanel>
+            <ListBox Name="MyList2">
+                <CheckBox Margin="3">Option 1</CheckBox>
+                <CheckBox Margin="3">Option 2</CheckBox>
+                <CheckBox Margin="3">Option 3</CheckBox>
+            </ListBox>
+            <StackPanel Grid.Row="1"
+                        Margin="0,10,0,0">
+                <Button Margin="0,10,0,0"
+                        Name="btnSelection">Afficher la sélection</Button>
+            </StackPanel>
+
+            <TextBlock Name="MyLabelMessage2"
+                       TextWrapping="Wrap"></TextBlock>
+        </StackPanel>
+
+        <!--// Atelier1 : Récup des Cac actives sachant que les items sont des CheckBox
+
+
+        // Atelier2 : Récup du click des CheckBox avec l'ev. attaché CheckBox.Click="Liste_Click"
+
+        // Lorsque les items ne se trouvent pas dans un ListBoxItem, les Ptés SelectedIndex et SelectedItem ne sont pas renseignées
+        // Ces ptés étant modifiables, on peut néanmoins récupérer la case à cocher cliquée en tant que SelectedItem-->
+
+        <!-- Trier les Items  -->
+
+        <ListBox Name="MyList3">
+            <ListBoxItem>Lundi</ListBoxItem>
+            <ListBoxItem>Mardi</ListBoxItem>
+            <ListBoxItem>Mercredi</ListBoxItem>
+            <ListBoxItem>Mercredi</ListBoxItem>
+            <ListBoxItem>Jeudi</ListBoxItem>
+            <ListBoxItem>Vendredi</ListBoxItem>
+            <ListBoxItem>Samedi</ListBoxItem>
+            <ListBoxItem>Dimanche</ListBoxItem>
+        </ListBox>
+
+        <!-- Afficher les Items horizontalement -->
+
+        <ListBox>
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <VirtualizingStackPanel Orientation="Horizontal"/>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+            <ListBoxItem>Valeur 1</ListBoxItem>
+            <ListBoxItem>Valeur 2</ListBoxItem>
+            <ListBoxItem>Valeur 3</ListBoxItem>
+        </ListBox>
+
+        <!-- Controle ComboBox avec la Pté IsEditable -->
+
+        <!-- Utilisation de la Pté attachée TextSearch.TextPath="Children[1].Children[0].Text" 
+	 ou de la Pté attachée TextSearch.Text="Mer" des items -->
+
+        <ComboBox Width="600" Height="30" IsEditable="True" >
+            <!-- Item #1 -->
+            <StackPanel Orientation="Horizontal" Margin="5" TextSearch.Text="Mer">
+                <Image Source="voyages_mer.jpg"/>
+                <StackPanel Width="200">
+                    <TextBlock Margin="10,0" FontWeight="Bold" Text="Mer" />
+                    <TextBlock Margin="10,0" FontSize="14" VerticalAlignment="center" TextWrapping="Wrap">
+                        Séjour en bord de mer, avec plages de sables fin et ses paillottes exotiques ...
+                    </TextBlock>
+                </StackPanel>
+            </StackPanel>
+            <!-- Item #2 -->
+            <StackPanel Orientation="Horizontal" Margin="5"  TextSearch.Text="Montagne">
+                <Image Source="voyages_ski.jpg"/>
+                <StackPanel Width="200">
+                    <TextBlock Margin="10,0" FontWeight="Bold" Text="Montagne"/>
+                    <TextBlock Margin="10,0" FontSize="14" VerticalAlignment="center" TextWrapping="Wrap">
+                        Séjours à la montagne toute l'année, avec son vaste domaine skiable l'hiver et ses randonnées pédestres et VTT l'été !
+                    </TextBlock>
+                </StackPanel>
+            </StackPanel>
+            <!-- Item #3 -->
+            <StackPanel Orientation="Horizontal" Margin="5" TextSearch.Text="Sud">
+                <Image Source="Images/voyages_sud.jpg"/>
+                <StackPanel Width="200">
+                    <TextBlock Margin="10,0" FontWeight="Bold" Text="Sud"/>
+                    <TextBlock Margin="10,0" FontSize="14" VerticalAlignment="center" TextWrapping="Wrap">
+                        Séjours sous les tropiques pour avoir du soleil toute l'année !
+                    </TextBlock>
+                </StackPanel>
+            </StackPanel>
+        </ComboBox>
+
+        <!-- Controle ListView -->
+
+        <StackPanel>
+            <ListView Name="MyList4">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Date" />
+                        <GridViewColumn Header="Jour" DisplayMemberBinding="{Binding Date, StringFormat=MMMM}" />
+                        <GridViewColumn Header="Année" DisplayMemberBinding="{Binding Year}" />
+                    </GridView>
+                </ListView.View>
+                <system:DateTime>1/1/2010</system:DateTime>
+                <system:DateTime>1/2/2010</system:DateTime>
+                <system:DateTime>1/3/2010</system:DateTime>
+            </ListView>
+            <TextBlock Name="lblMsg" />
+        </StackPanel>
+
+        <!-- Le TabControl -->
+
+        <StackPanel>
+            <TabControl Margin="5">
+                <TabItem Header="Onglet 1">
+                    <StackPanel Margin="3">
+                        <RadioButton Margin="3">Option 1</RadioButton>
+                        <RadioButton Margin="3">Option 2</RadioButton>
+                        <RadioButton Margin="3">Option 3</RadioButton>
+                    </StackPanel>
+                </TabItem>
+                <TabItem>
+                    <TabItem.Header>
+                        <StackPanel>
+                            <TextBlock Margin="3">Onglet 2 avec texte et image</TextBlock>
+                            <Image Source="smile.jpg"
+                                   Stretch="None" />
+                        </StackPanel>
+                    </TabItem.Header>
+                    <StackPanel Margin="3">
+                        <RadioButton Margin="3">Option 4</RadioButton>
+                        <RadioButton Margin="3">Option 5</RadioButton>
+                        <RadioButton Margin="3">Option 6</RadioButton>
+                    </StackPanel>
+                </TabItem>
+            </TabControl>
+        </StackPanel>
+
+        <!-- Controle Menu -->
+
+        <Menu FontSize="20">
+            <MenuItem Header="_Fichier">
+                <MenuItem Header="_Nouveau"/>
+                <MenuItem Header="_Ouvrir"/>
+                <Separator/>
+                <MenuItem Header="Documents récents">
+                    <MenuItem Header="Document 1"/>
+                    <MenuItem Header="Document 2"/>
+                    <MenuItem Header="..."/>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="_Edition">
+                …
+            </MenuItem>
+            <MenuItem Header="_A propos">
+                …
+            </MenuItem>
+        </Menu>
+
+        <!-- ContextMenu -->
+
+        <ListBox>
+            <ListBox.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Calendrier"/>
+                    <MenuItem Header="Nouveau RDV"/>
+                </ContextMenu>
+            </ListBox.ContextMenu>
+
+            <ListBoxItem>Lundi</ListBoxItem>
+            <ListBoxItem>Mardi</ListBoxItem>
+            <ListBoxItem>Mercredi</ListBoxItem>
+            <ListBoxItem>Mercredi</ListBoxItem>
+            <ListBoxItem>Jeudi</ListBoxItem>
+            <ListBoxItem>Vendredi</ListBoxItem>
+            <ListBoxItem>Samedi</ListBoxItem>
+            <ListBoxItem>Dimanche</ListBoxItem>
+        </ListBox>
+
+        <!-- Controle ToolBar -->
+
+        <ToolBarTray Background="White">
+            <ToolBar Band="1" BandIndex="1">
+                <Button>
+                    <Image Source="Nouveau.png"/>
+                </Button>
+                <Button>
+                    <Image Source="Enregistrer.png"/>
+                </Button>
+            </ToolBar>
+            <ToolBar Band="2" BandIndex="2">
+                <ToggleButton>
+                    <Image Source="Gras.png"/>
+                </ToggleButton>
+                <CheckBox>
+                    <TextBlock TextDecorations="Underline" Text="Souligné"/>
+                </CheckBox>
+                <CheckBox FontStyle="Italic" Content="Italique" />
+                <Separator/>
+                <ComboBox SelectedIndex="1">
+                    <ComboBoxItem>50%</ComboBoxItem>
+                    <ComboBoxItem>100%</ComboBoxItem>
+                    <ComboBoxItem>200%</ComboBoxItem>
+                </ComboBox>
+            </ToolBar>
+        </ToolBarTray>
+
+        <!-- Controle TreeView -->
+
+        <TreeView>
+            <TreeViewItem Header="Support" IsSelected="True">
+                <TreeViewItem Header="Jean Martin" />
+                <TreeViewItem Header="jean.martin@hoatmail.fr" />
+                <TreeViewItem Header="Compétences">
+                    <TreeViewItem Header="ASP .NET" />
+                    <TreeViewItem Header="SQL Server" />
+                    <TreeViewItem Header="Silverlight" />
+                </TreeViewItem>
+            </TreeViewItem>
+            <TreeViewItem Header="Commerciaux">
+                <TreeViewItem Header="John Binger" />
+                <TreeViewItem Header="jb@gmail.com" />
+                <TreeViewItem Header="Produits">
+                    <TreeViewItem Header="Office" />
+                    <TreeViewItem Header="Windows" />
+                    <TreeViewItem Header="Linux" />
+                </TreeViewItem>
+            </TreeViewItem>
+        </TreeView>
+
+    </StackPanel>
+</Window>
