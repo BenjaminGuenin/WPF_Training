@@ -1,0 +1,16 @@
+﻿<PageFunction
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib" 
+    x:Class="Navigation.PageFunction1"
+    x:TypeArguments="sys:String"
+    Title="PageFunction1">
+    <StackPanel Margin="10">
+        <TextBlock>Entrez une valeur</TextBlock>
+        <TextBox Name="txtValeur" />
+        <TextBlock HorizontalAlignment="Right">
+      <Hyperlink Name="lienOk" Click="lienOk_Click">OK</Hyperlink>
+      <Hyperlink Name="lienAnnuler" Click="lienAnnuler_Click">Annuler</Hyperlink>
+        </TextBlock>
+    </StackPanel>
+</PageFunction>

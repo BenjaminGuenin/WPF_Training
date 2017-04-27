@@ -1,0 +1,13 @@
+﻿<Page x:Class="Navigation.Page2" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Title="Page2">
+    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+        <TextBlock Margin="20" HorizontalAlignment="Center"> Page 2</TextBlock>
+        
+        <TextBlock Name="lblMsg" Margin="20" HorizontalAlignment="Center"></TextBlock>
+        <Button Name="btnRetourVersPage1" Click="btnRetourVersPage1_Click" Padding="10" Content="Retour vers la page 1">
+        </Button>
+        <TextBlock Margin="30" HorizontalAlignment="Center">
+            <Hyperlink NavigateUri="Page1.xaml">Retour vers la page 1</Hyperlink>
+        </TextBlock>
+    </StackPanel>
+</Page>

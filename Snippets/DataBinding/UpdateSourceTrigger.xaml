@@ -1,0 +1,21 @@
+﻿<Window x:Class="DataBinding.UpdateSourceTrigger"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="LiaisonElements" Height="300" Width="800">
+    <StackPanel Margin="5">
+
+        <Slider x:Name="sldSource" Margin="5" Minimum="10" Maximum="40" Value="20" TickFrequency="1" IsSnapToTickEnabled="True" TickPlacement="TopLeft" />
+
+        <TextBlock Margin="5" x:Name="lblCible" Text="Texte à taille variable" FontSize="{Binding Path=Value, ElementName=sldSource, Mode=TwoWay}"/>
+
+        <StackPanel Orientation="Horizontal">
+            <Button Margin="5" Padding="5" x:Name="btnChangerSource" Content="Positionner curseur (source)"/>
+            <Button Margin="5" Padding="5" x:Name="btnChangerCible" Content="Changer taille texte (cible)"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="5">
+            <TextBlock VerticalAlignment="Center" Margin="0,0,10,0"><Run Text="Taille du texte :"/></TextBlock>
+            <TextBox Width="50" HorizontalContentAlignment="Center" Text="{Binding Path=FontSize, ElementName=lblCible, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        </StackPanel>
+    </StackPanel>
+</Window>
