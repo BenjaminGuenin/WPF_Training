@@ -1,0 +1,20 @@
+﻿<Window x:Class="ModelControlTemplate.ContentPresenter"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="TemplateBinding" Height="300" Width="300">
+    <Window.Resources>
+        <ControlTemplate x:Key="ModeleBouton" TargetType="Button">
+            <!--Content presenter allows to put everything as a content (TextBlock, Image etc.)
+            Non like TemplateBinding that forces the content (TextBlock in the previous example)-->
+            <Grid Width="200" Height="100" >
+                <Ellipse Width="200" Height="100" Fill="Blue" />
+                <Ellipse Width="180" Height="80" Fill="AliceBlue" />
+                <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"></ContentPresenter>
+            </Grid>
+        </ControlTemplate>
+    </Window.Resources>
+    <StackPanel Margin="10">
+        <Button Template="{StaticResource ModeleBouton}">Bouton avec Modèle</Button>
+        <Button>Bouton sans modèle</Button>
+    </StackPanel>
+</Window>

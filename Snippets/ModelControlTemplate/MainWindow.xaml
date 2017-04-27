@@ -1,0 +1,17 @@
+﻿<Window x:Class="ModelControlTemplate.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <ControlTemplate x:Key="ModeleBouton" TargetType="Button">
+            <Grid>
+                <Ellipse Width="100" Height="100" Fill="Blue" />
+                <Ellipse Width="80" Height="80" Fill="AliceBlue" />
+            </Grid>
+        </ControlTemplate>
+    </Window.Resources>
+    <StackPanel Margin="10">
+        <Button Template="{StaticResource ModeleBouton}">Bouton avec Modèle</Button>
+        <Button>Bouton sans modèle</Button>
+    </StackPanel>
+</Window>

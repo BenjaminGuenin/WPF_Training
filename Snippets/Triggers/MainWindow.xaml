@@ -1,0 +1,39 @@
+﻿<Window x:Class="Triggers.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <!--<Style TargetType="TextBox">
+            <Setter Property="FontFamily" Value="verdana" />
+            <Setter Property="FontSize" Value="16" />
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Foreground" Value="YellowGreen"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>-->
+
+
+
+        <!-- DataTrigger -->
+
+            <!--<Style TargetType="TextBox">
+                <Setter Property="FontFamily" Value="verdana" />
+                <Setter Property="FontSize" Value="16" />
+                <Style.Triggers>
+                    <DataTrigger
+                        Binding="{Binding RelativeSource={RelativeSource Self}, Path=Text}"
+                        Value="rouge">
+                        <Setter Property="Foreground" Value="Red"/>
+                    </DataTrigger>
+                    <DataTrigger
+                        Binding="{Binding RelativeSource={RelativeSource Self}, Path=Text}"
+                        Value="vert">
+                        <Setter Property="Foreground" Value="Green"/>
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>-->
+
+
+    </Grid>
+</Window>

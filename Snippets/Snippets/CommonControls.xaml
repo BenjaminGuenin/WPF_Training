@@ -102,7 +102,7 @@
                         </TextBlock>
                         <Separator/>
                         <StackPanel Orientation="Horizontal" Margin="5">
-                            <Image Source="aide.png" />
+                            <Image Source="Images/aide.png" />
                             <TextBlock FontWeight="Bold" Margin="5">Appuyez sur F1 pour une aide plus détaillée.</TextBlock>
                         </StackPanel>
                     </StackPanel>

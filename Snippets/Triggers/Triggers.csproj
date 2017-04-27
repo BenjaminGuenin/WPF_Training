@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{845BFCFF-333C-4776-A674-032CE531D5B3}</ProjectGuid>
+    <ProjectGuid>{0A91F0DF-7BCE-4032-8F57-6D0310BDE1BF}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Snippets</RootNamespace>
-    <AssemblyName>Snippets</AssemblyName>
+    <RootNamespace>Triggers</RootNamespace>
+    <AssemblyName>Triggers</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -53,28 +53,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="CommonControls.xaml.cs">
-      <DependentUpon>CommonControls.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ToolbarTray.xaml.cs">
-      <DependentUpon>ToolbarTray.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="TreeView.xaml.cs">
-      <DependentUpon>TreeView.xaml</DependentUpon>
-    </Compile>
-    <Page Include="ComboBox.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="CommonControls.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ListBoxContextMenu.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ListeBox.xaml">
+    <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -82,40 +61,12 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="ComboBox.xaml.cs">
-      <DependentUpon>ComboBox.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ListBoxContextMenu.xaml.cs">
-      <DependentUpon>ListBoxContextMenu.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ListeBox.xaml.cs">
-      <DependentUpon>ListeBox.xaml</DependentUpon>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="ListeView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Menu.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ToolbarTray.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="TreeView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ListeView.xaml.cs">
-      <DependentUpon>ListeView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Menu.xaml.cs">
-      <DependentUpon>Menu.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -141,36 +92,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\voyages_sud.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\voyages_mer.jpg" />
-    <Resource Include="Images\voyages_montagne.jpg" />
-    <Resource Include="Images\voyages_ski.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\btnAide.png" />
-    <Resource Include="Images\btnAjouter.png" />
-    <Resource Include="Images\FormatGras.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\btnSav.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\smile.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\btnAnnuler.png" />
-    <Resource Include="Images\btnSupprimer.png" />
-    <Resource Include="Images\EditionColler.png" />
-    <Resource Include="Images\EditionCopier.png" />
-    <Resource Include="Images\EditionCouper.png" />
-    <Resource Include="Images\FichierEnregistrer.png" />
-    <Resource Include="Images\Fichier_Ouvrir.png" />
-    <Resource Include="Images\FormatItalique.png" />
-    <Resource Include="Images\FormatSouligne.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
