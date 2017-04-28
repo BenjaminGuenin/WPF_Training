@@ -1,0 +1,19 @@
+﻿<Window x:Class="Documents.DocFixe"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Doc fixe" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <ToolBar Grid.Row="0">
+            <Button x:Name="btnOuvrirDoc" Click="btnOuvrirDoc_Click" >Ouvrir un document</Button>
+        </ToolBar>
+        <DocumentViewer x:Name="docViewer" VerticalAlignment="Stretch" Grid.Row="1">
+
+        </DocumentViewer>
+    </Grid>
+
+
+</Window>

@@ -1,0 +1,32 @@
+﻿<Window x:Class="Documents.EditionDoc" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Title="Edition d'un document" Height="500" Width="400">
+    <StackPanel>
+<ToolBarTray AllowDrop="True">
+    <ToolBar>                
+        <Button x:Name="btnOuvrir" Click="btnOuvrir_Click">Ouvrir</Button>
+        <Button x:Name="btnEnregistrer" Click="btnEnregistrer_Click">Enregistrer</Button>
+        <Button Command="ApplicationCommands.Print" CommandTarget="{Binding ElementName=txtEdition}">Imprimer</Button>
+    </ToolBar>
+    <ToolBar>
+        <Button FontWeight="Bold" Command="EditingCommands.ToggleBold">Gras</Button>
+        <Button FontStyle="Italic" Command="EditingCommands.ToggleItalic">Italic</Button>
+        <Button Command="EditingCommands.ToggleUnderline">Souligné</Button>
+    </ToolBar>
+</ToolBarTray>
+
+<RichTextBox x:Name="txtEdition">
+    <FlowDocument x:Name="Test">
+        <!-- Contenu du doc -->
+        <Paragraph FontSize="20" FontWeight="Bold" TextDecorations="Underline">
+            Chaptitre 1
+        </Paragraph>
+
+        <Paragraph>
+            C# 2.0 introduit plusieurs extensions de langage, y compris les génériques, les méthodes anonymes, les itérateurs, les types partiels et les types nullables.
+        </Paragraph>
+        <Paragraph>
+            Ce chapitre constitue une introduction à ces nouvelles fonctionnalités. Cette introduction est suivie de cinq chapitres qui fournissent une spécification technique complète de ces fonctionnalités. Le dernier chapitre décrit un certain nombre d'extensions plus petites également incluses dans C# 2.0. Les extensions de langage intégrées à C# 2.0 ont été conçues pour garantir une compatibilité maximale avec le code existant. Par exemple, bien que C# 2.0 donne une signification particulière aux mots where, yield et partial dans certains contextes, ces mots restent utilisables comme identificateurs. En effet, C# 2.0 n'ajoute aucun mot clé nouveau car ceux ci pourraient être en conflit avec les identificateurs présents dans le code existant.
+        </Paragraph>
+    </FlowDocument>
+</RichTextBox>
+    </StackPanel>
+</Window>

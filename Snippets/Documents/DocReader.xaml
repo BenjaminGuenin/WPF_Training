@@ -1,0 +1,39 @@
+﻿<Window x:Class="Documents.DocReader" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Title="Doc reader" Height="400" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <ToolBar Grid.Row="0">
+            <Button Command="Print" CommandTarget="{Binding ElementName=doc}">Imprimer</Button>
+        </ToolBar>
+
+        <FlowDocumentReader x:Name="doc" Grid.Row="1">
+            <FlowDocument ColumnWidth="400" FontSize="14" FontFamily="Arial">
+                <Paragraph FontSize="20" FontWeight="Bold" TextDecorations="Underline">
+                    Chaptitre 1 : Introduction à C# 2
+                </Paragraph>
+
+                <Paragraph>
+                    C# 2.0 introduit plusieurs extensions de langage, y compris les génériques, les méthodes anonymes, les itérateurs, les types partiels et les types nullables.
+                </Paragraph>
+                <Paragraph>
+                    Ce chapitre constitue une introduction à ces nouvelles fonctionnalités. Cette introduction est suivie de cinq chapitres qui fournissent une spécification technique complète de ces fonctionnalités. Le dernier chapitre décrit un certain nombre d'extensions plus petites également incluses dans C# 2.0. Les extensions de langage intégrées à C# 2.0 ont été conçues pour garantir une compatibilité maximale avec le code existant. Par exemple, bien que C# 2.0 donne une signification particulière aux mots where, yield et partial dans certains contextes, ces mots restent utilisables comme identificateurs. En effet, C# 2.0 n'ajoute aucun mot clé nouveau car ceux ci pourraient être en conflit avec les identificateurs présents dans le code existant.
+                </Paragraph>
+
+                <Paragraph FontSize="20" FontWeight="Bold" TextDecorations="Underline">
+                    Chaptitre 2 : les génériques
+                </Paragraph>
+                <Paragraph>
+                    Les génériques permettent aux classes, structs, interfaces, délégués et méthodes d'être paramétrés par les types de données qu'ils stockent et manipulent. Les génériques C# seront immédiatement familiers aux utilisateurs des génériques du langage Eiffel ou Ada, ainsi qu'aux utilisateurs des modèles C++, sans les nombreuses complications de ces derniers.
+                </Paragraph>
+                <Paragraph>
+                    Sans génériques, les structures de données à usage général peuvent utiliser un type object pour stocker des données de n'importe quel type. Par exemple, la classe Stack simple suivante stocke ses données dans un tableau object, et ses deux méthodes, Push et Pop, utilisent le type object pour, respectivement, accepter et retourner des données.
+                </Paragraph>
+                <Paragraph>
+                    Si l'utilisation du type object rend la classe Stack particulièrement souple, elle présente néanmoins des inconvénients. Par exemple, il est possible d'effectuer un push d'une valeur de n'importe quel type, telle qu'une instance de Customer, dans une pile. Toutefois, lorsqu'une valeur est récupérée, le résultat de la méthode Pop doit être casté en retour de façon explicite en type approprié, ce qui constitue une exécution fastidieuse à rédiger qui pénalise les performances d'un éventuel contrôle de type à l'exécution.
+                </Paragraph>
+            </FlowDocument>
+        </FlowDocumentReader>
+    </Grid>
+</Window>

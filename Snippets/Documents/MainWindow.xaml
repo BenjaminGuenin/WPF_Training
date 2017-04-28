@@ -1,0 +1,19 @@
+﻿<Window x:Class="Documents.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Documents" Height="350" Width="525">
+    <StackPanel>
+        <StackPanel.Resources>
+            <Style TargetType="Button">
+                <Setter Property="Margin" Value="10"></Setter>
+                <Setter Property="Padding" Value="10"></Setter>
+            </Style>
+        </StackPanel.Resources>
+
+        <Button x:Name="btnDocStatique" Click="btnDocStatique_Click">Doc statique</Button>
+        <Button x:Name="btnDocDynamique" Click="btnDocDynamique_Click">Doc dynamique</Button>
+        <Button x:Name="btnEditionDoc" Click="btnEditionDoc_Click">Edition Doc</Button>
+        <Button x:Name="btnDocReader" Click="btnDocReader_Click">Doc reader</Button>
+        <Button x:Name="btnDocFixe" Click="btnDocFixe_Click">Doc fixe</Button>
+    </StackPanel>
+</Window>
